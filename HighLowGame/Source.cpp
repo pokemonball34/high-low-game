@@ -4,7 +4,7 @@
 
 int main() {
 	srand((unsigned) time(0));
-	int randInt{rand() % 100};
+	int randInt{(rand() % 100) + 1};
 
 	std::cout << "Let's play a guessing game! I got a number in my head that's between 1 to 100 inclusive.\n";
 	std::cout << "Don't worry if you don't get it on the first try! I'll let you know if it's too high or too low.\n";
