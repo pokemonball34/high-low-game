@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/.vs/HighLowGame/v16/Browse.VC.db-shm
+/.vs/HighLowGame/v16/Browse.VC.db-wal
+/.vs/HighLowGame/v16/Browse.VC.opendb

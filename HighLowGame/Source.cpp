@@ -6,15 +6,17 @@ int main() {
 	srand((unsigned) time(0));
 	int randInt{(rand() % 100) + 1};
 
+	constexpr int MAX_GUESSES = 7;
+
 	std::cout << "Let's play a guessing game! I got a number in my head that's between 1 to 100 inclusive.\n";
 	std::cout << "Don't worry if you don't get it on the first try! I'll let you know if it's too high or too low.\n";
-	std::cout << "I'll give you 7 guesses.\n";
+	std::cout << "I'll give you " << MAX_GUESSES << " guesses.\n";
 	
 	int guess;
 
-	for (int i = 0; i < 7; i++) {
-		if (i < 6) {
-			std::cout << "You have " << 7 - i << " guesses left.\n";
+	for (int i = 0; i < MAX_GUESSES; i++) {
+		if (i < MAX_GUESSES - 1) {
+			std::cout << "You have " << MAX_GUESSES - i << " guesses left.\n";
 		}
 		else {
 			std::cout << "LAST GUESS.\n";
@@ -31,7 +33,7 @@ int main() {
 		}
 		else if (guess == randInt) {
 			std::cout << "Correct! ";
-			i = 7;
+			i = MAX_GUESSES;
 		}
 	}
 	
